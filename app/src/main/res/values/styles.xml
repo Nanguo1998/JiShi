@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+
+
+        <!--colorPrimaryDark对应状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/widowColor</item>
+
+        <!--窗口的颜色-->
+        <item name="colorPrimary">@color/widowColor</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBarWithBackGround">
+        <item name="windowActionBar">false</item>//取消Actionbar
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>//设置全屏
+    </style>
+    <style name="AppTheme2" parent="AppTheme.NoActionBarWithBackGround">
+
+        <item name="android:windowBackground">@drawable/poster</item>//设置背景
+
+    </style>
+    <style name="AppTheme3" parent="AppTheme.NoActionBarWithBackGround">
+        <item name="windowActionBar">false</item>//取消Actionbar
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>//设置全屏
+
+    </style>
+    <style name="NoTitleBar" parent="AppTheme.Base">
+
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <!--Status bar color-->
+    <color name="statusColor">#ff0000</color>
+    <!-- toolBar color -->
+    <color name="toolBarColor">#0000ff</color>
+    <!--EditText,RadioButton,CheckBox color-->
+    <color name="editColor">#FD87A9</color>
+    <!--Window color-->
+    <color name="widowColor">#ffffff</color>
+    <style name="dateStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="tallerProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/initprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="studyProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/studyprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="socialProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/socialprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="spareProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/spareprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="newsProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/newsprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="otherProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/otherprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+    <style name="warnProgressBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/warnprogressbar</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+
+        <item name="android:minHeight">8dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+</resources>

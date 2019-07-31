@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.icebreaker.timelapse">
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于提高GPS定位速度 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 开机自启动权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 3.2.0版本增加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/easyicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/easyicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".addresspart.StartPosterActivity"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="77accbd87bc6b444cb1f34aa528394dc" />
+        <!-- 定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- 启动一个定位服务 -->
+
+        <service android:name=".addresspart.LocationService" />
+        <service android:name=".apppart.AppService" />
+
+        <activity
+            android:name=".addresspart.AddressActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".addresspart.GraphicActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".addresspart.MapActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".apppart.AppListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AnalyseActivity"
+            android:theme="@style/AppTheme3" />
+
+        <receiver
+            android:name=".addresspart.BootBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".apppart.StudyStatisticActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".apppart.WorkStatisticActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".apppart.PlayStatisticActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".apppart.OtherStatisticActivity"
+            android:theme="@style/AppTheme3" />
+        <activity
+            android:name=".StartPage.LoginActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".StartPage.RegisterActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".person.PersonActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".person.RecordDetailActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".person.SettingActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".person.EditSignatureActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".person.EditUserNameActivity"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

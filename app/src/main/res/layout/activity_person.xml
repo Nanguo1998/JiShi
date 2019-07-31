@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/headPart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/headback">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageUserHead"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/jinshi"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textUserName"
+            android:text="卖相馅饼和肉夹馍"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textUserSig"
+            android:text="这把混下巴唐"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:paddingTop="5dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+            <TextView
+                android:id="@+id/text_record"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/str_record"
+                android:textColor="#82858b"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/text_honor"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/str_honor"
+                android:textColor="#82858b"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/text_today"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/str_today"
+                android:textColor="#82858b"
+                android:textSize="18dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/pages"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_alignParentTop="true"-->
+
+             <!--&gt;-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/recordPage"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_record"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/str_record"-->
+                        <!--android:textColor="#82858b" />-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/image_record"-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/underline" />-->
+
+
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/honorPage"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_honor"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/str_honor"-->
+                        <!--android:textColor="#82858b" />-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/image_honor"-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/underline"-->
+                        <!--android:visibility="invisible"/>-->
+
+
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/todayPage"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1" >-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:orientation="vertical" >-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/text_today"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="25dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/str_today"-->
+                        <!--android:textColor="#82858b" />-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/image_today"-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/underline"-->
+                        <!--android:visibility="invisible"/>-->
+
+
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+        <!--</LinearLayout>-->
+        <!--<FrameLayout-->
+            <!--android:id="@+id/content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginTop="50dp" >-->
+        <!--</FrameLayout>-->
+
+
+    <!--</RelativeLayout>-->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </FrameLayout>
+</LinearLayout>
